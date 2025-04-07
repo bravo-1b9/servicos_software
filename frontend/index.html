@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Detector de Sentimento</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      padding: 40px;
+    }
+    h1, h2 {
+      color: #ffcc00;
+    }
+    textarea {
+      width: 100%;
+      max-width: 600px;
+      height: 100px;
+      background-color: #111;
+      color: #fff;
+      border: 1px solid #444;
+      padding: 10px;
+      font-size: 16px;
+    }
+    input[type="file"] {
+      margin-top: 10px;
+    }
+    button {
+      background-color: #ffcc00;
+      color: #000;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    button:hover {
+      background-color: #e6b800;
+    }
+    #resultado, #resultado-arquivo {
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Detector de Sentimento</h1>
+  <p>Digite abaixo uma frase para verificar se ela tem tonalidade positiva ou negativa:</p>
+
+  <textarea id="text-input" placeholder="Ex: Esse produto é excelente!"></textarea><br>
+  <button onclick="enviarTexto()">Analisar Texto</button>
+  <p id="resultado"></p>
+
+  <hr style="margin: 40px 0; border-color: #333;">
+
+  <h2>Ou envie um arquivo de texto (.txt):</h2>
+  <input type="file" id="file-input" accept=".txt"><br>
+  <button onclick="enviarArquivo()">Analisar Arquivo</button>
+  <p id="resultado-arquivo"></p>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+<p style="color: #aaa; font-size: 14px;">
+  Modelo de sentimento pré-treinado com acurácia estimada em <strong>~90%</strong> (multilíngue).
+</p>
+
+
+
